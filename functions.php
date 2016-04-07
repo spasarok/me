@@ -1,10 +1,13 @@
 <?php
 
 // Enqueue jQuery
-function jquery_init() {
+function kim_enqueue_scripts() {
+    $dir = get_template_directory_uri();
     wp_enqueue_script('jquery');
+    wp_enqueue_style('kim_main_style', $dir.'/style.css');
+    wp_enqueue_style('bootstrap', get_template_directory_uri().'/lib/bootstrap-3.3.6/css/bootstrap.min.css');
 }
-add_action('wp_enqueue_scripts', 'jquery_init');
+add_action('wp_enqueue_scripts', 'kim_enqueue_scripts');
 
 // Menus
 function register_my_menus(){
@@ -15,12 +18,6 @@ function register_my_menus(){
 add_theme_support('menus');
 add_action('init', 'register_my_menus');
 
-// Styles
-function kim_enqueue_styles() {
-    $dir = get_template_directory_uri();
-    wp_enqueue_style('kim_main_style', $dir.'/style.css');
-}
-add_action('wp_enqueue_scripts', 'kim_enqueue_styles');
 
 // Post types
 function kim_post_types() {

@@ -4,10 +4,7 @@
 <html>
 <?php get_header(); ?>
 
-<?php $classes = "resume"; ?>
-<?php if(is_front_page()) $classes = $classes.' home'; ?>
-<body class="<?php echo $classes; ?>">
-<main>
+<main class="resume">
     <div class="container">
         <h1>Resume</h1>
         <section class="skills">
@@ -38,6 +35,6 @@
         </section>
     </div>
 </main>
+
 <?php get_footer(); ?>
-</body>
 </html>

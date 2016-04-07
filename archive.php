@@ -2,12 +2,7 @@
 <html>
 <?php get_header(); ?>
 
-<?php $classes = "page"; ?>
-<?php if(is_front_page()) $classes = $classes.' home'; ?>
-<body class="<?php echo $classes; ?>">
-
-
-<main>
+<main class="archive">
     <div class="container">
         <h1>Lessons</h1>
 
@@ -24,6 +19,6 @@
         <?php endwhile?>
     </div>
 </main>
+
 <?php get_footer(); ?>
-</body>
 </html>
