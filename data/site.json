@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "Kay Spasaro",
+    "copyrightName": "Kay Spasaro"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "url": ""
+    },
+    {
+      "label": "Resume",
+      "url": "resume/"
+    },
+    {
+      "label": "Lessons",
+      "url": "lessons/"
+    }
+  ],
+  "home": {
+    "avatar": "assets/images/logo.gif",
+    "intro": "<p>Hello!</p>"
+  },
+  "resume": {
+    "skills": {
+      "tags": [
+        "Agentic Development",
+        "Microservices",
+        "Automation",
+        "CI/CD",
+        "Security",
+        "Observability",
+        "Architecture",
+        "Relational Databases",
+        "Infrastructure as Code",
+        "Version Control"
+      ]
+    },
+    "languages": {
+      "tags": [
+        "Go",
+        "Python",
+        "Bash",
+        ".NET",
+        "PHP"
+      ]
+    },
+    "technologies": {
+      "tags": [
+        "Claude Code",
+        "Docker",
+        "Postgres",
+        "Datadog",
+        "Terraform",
+        "Git"
+      ]
+    },
+    "experience": [
+      {
+        "title": "Senior Software Engineer",
+        "employer": "Wizards of the Coast",
+        "icon": "assets/images/open-license/card-random-svgrepo-com.svg",
+        "start": "October 2024",
+        "end": null,
+        "present": true,
+        "tags": [
+          ".NET",
+          "Go",
+          "Docker",
+          "Postgres",
+          "Kubernetes",
+          "Git"
+        ]
+      },
+      {
+        "title": "Previous Position",
+        "employer": "Previous Employer",
+        "icon": "assets/images/research.png",
+        "start": "August 2018",
+        "end": "May 2020",
+        "present": false
+      }
+    ],
+    "outreach": [
+      {
+        "title": "School Volunteer",
+        "employer": "Zachary Lane Elementary",
+        "icon": "assets/images/teaching.png",
+        "start": "March 2025",
+        "end": null,
+        "present": true
+      }
+    ]
+  },
+  "lessons": [
+    {
+      "title": "Example Lesson",
+      "slug": "example-lesson",
+      "summary": "<p>A short summary shown on the lessons list.</p>",
+      "content": "<p>The full lesson content, rendered on the lesson's own page.</p>"
+    }
+  ],
+  "pages": [
+    {
+      "title": "About",
+      "slug": "about",
+      "content": "<p>Replace with real page content.</p>"
+    }
+  ]
+}

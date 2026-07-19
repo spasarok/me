@@ -1,0 +1,13 @@
+{
+  "name": "personal-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static site build for kimspasaro.com, data-driven from data/site.json",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "serve": "node scripts/serve.js",
+    "start": "npm run build && npm run serve",
+    "watch": "node scripts/watch.js",
+    "dev": "node scripts/dev.js"
+  }
+}
