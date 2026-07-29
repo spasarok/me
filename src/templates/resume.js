@@ -32,17 +32,17 @@ function renderResume({ site, nav, data }) {
   const content = `<main class="resume">
     <div class="container">
         <h1>Resume</h1>
-        
+
         <section class="skills">
             <h2>Skills</h2>
             <section class="concepts">
                 ${kbd(skills.tags)}
             </section>
-            
+
             <section class="languages">
                 ${kbd(languages.tags)}
             </section>
-            
+
             <section class="technologies">
                 ${kbd(technologies.tags)}
             </section>
@@ -61,7 +61,7 @@ function renderResume({ site, nav, data }) {
                 ${timeline(outreach, root)}
             </div>
         </section>
-        
+
         <section class="education">
             <h2>Education</h2>
             <div class="timeline">

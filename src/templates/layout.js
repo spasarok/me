@@ -15,8 +15,7 @@ function kbd(tags) {
 function socialLink(item, root) {
   return `<a href="${item.url}" class="social-link">
         <img class="icon" src="${escapeHtml(root + item.iconLight)}" alt="${escapeHtml(item.label)}">
-      </a>
-    </article>`;
+      </a>`;
 }
 
 function renderNav(nav, root) {
@@ -47,11 +46,10 @@ function layout({ site, nav, title, socials, bodyClass, root, content }) {
 <body${bodyClass ? ` class="${escapeHtml(bodyClass)}"` : ''}>
 
 <header>
-    
     <div class="container">
-    <div class="socials">
-        ${socials.map((social) => socialLink(social, root))}
-    </div>
+        <div class="socials">
+            ${socials.map((social) => socialLink(social, root)).join('')}
+        </div>
         <h1><a href="${escapeHtml(root)}">${escapeHtml(site.title)}</a></h1>
     </div>
     <nav class="container">
@@ -63,9 +61,9 @@ ${content}
 
 <footer>
     <div class="container">
-                <div class="socials">
-                    ${socials.map((social) => socialLink(social, root))}
-                </div>
+        <div class="socials">
+            ${socials.map((social) => socialLink(social, root)).join('')}
+        </div>
     </div>
 </footer>
 

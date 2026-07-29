@@ -11,19 +11,18 @@ function renderHome({ site, nav, data }) {
                 <div class="col-sm-6">
                     <section>
                         <h2>About</h2>
-                         <p>
+                        <p>
                             ${kbd(tags)}
                         </p>
                     </section>
                     <section>
-                        
                     </section>
                 </div>
-                 <div class="col-sm-6 avatar-wrapper">
+                <div class="col-sm-6 avatar-wrapper">
                     ${avatar ? `<img class="avatar" src="${escapeHtml(root + avatar)}" alt="${escapeHtml(site.title)}">` : ''}
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 </main>`;
 
