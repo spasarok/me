@@ -1,0 +1,313 @@
+{
+  "site": {
+    "title": "Kay Spasaro",
+    "copyrightName": "Kay Spasaro"
+  },
+  "socials": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/spasarok",
+      "icon": "assets/images/licensed/GitHub_Invertocat_Black_Clearspace.png",
+      "iconLight": "assets/images/licensed/GitHub_Invertocat_White_Clearspace.png"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/kay-spasaro/",
+      "icon": "assets/images/licensed/InBug-Black.png",
+      "iconLight": "assets/images/licensed/InBug-White.png"
+    }
+  ],
+  "nav": [
+    {
+      "label": "Home",
+      "url": ""
+    },
+    {
+      "label": "Resume",
+      "url": "resume/"
+    }
+  ],
+  "home": {
+    "avatar": "assets/images/avatar-cropped.png",
+    "intro": "Hello World!",
+    "tags": [
+      "Software Engineering",
+      "Drums",
+      "Hiking",
+      "Photography",
+      "Retro Gaming",
+      "Graphic Novels",
+      "Magic: The Gathering",
+      "Reptiles"
+    ]
+  },
+  "resume": {
+    "skills": {
+      "tags": [
+        "Agentic Development",
+        "Microservices",
+        "Automation",
+        "CI/CD",
+        "Security",
+        "Observability",
+        "DevOps",
+        "Architecture",
+        "Relational Databases",
+        "Infrastructure as Code",
+        "Version Control"
+      ]
+    },
+    "languages": {
+      "tags": [
+        "Go",
+        "Python",
+        "Bash",
+        "JavaScript",
+        ".NET",
+        "Java",
+        "PHP",
+        "Lisp"
+      ]
+    },
+    "technologies": {
+      "tags": [
+        "Claude Code",
+        "Docker",
+        "Postgres",
+        "Datadog",
+        "Terraform",
+        "Git"
+      ]
+    },
+    "experience": [
+      {
+        "title": "Senior Software Engineer",
+        "employer": "Wizards of the Coast",
+        "icon": "assets/images/open-license/card-random-svgrepo-com.svg",
+        "start": "October 2023",
+        "showTimelineYear": true,
+        "end": null,
+        "present": true,
+        "tags": [
+          ".NET",
+          "Go",
+          "TypeScript",
+          "Docker",
+          "Postgres",
+          "Kubernetes",
+          "Datadog",
+          "Git"
+        ]
+      },
+      {
+        "title": "Senior Software Engineer",
+        "employer": "Target Corporation",
+        "icon": "assets/images/open-license/target-svgrepo-com.svg",
+        "start": "Jun 2019",
+        "end": "September 2023",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "Go",
+          "Docker",
+          "Postgres",
+          "Workflows",
+          "Infrastructure",
+          "Grafana",
+          "Git"
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "Target Corporation",
+        "icon": "assets/images/open-license/target-svgrepo-com.svg",
+        "start": "August 2018",
+        "end": "June 2019",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "Python",
+          "Bash",
+          "Ansible",
+          "AWX",
+          "Git"
+        ]
+      },
+      {
+        "title": "Software Engineer (Contractor)",
+        "employer": "Granular Insights",
+        "icon": "assets/images/open-license/farm-mill-wind-svgrepo-com.svg",
+        "start": "January 2018",
+        "end": "August 2018",
+        "present": false,
+        "tags": [
+          "DevOps",
+          "AWS CloudFormation",
+          "AWS SQS",
+          "AWS RDS",
+          "AWS S3",
+          "Terraform",
+          "Docker",
+          "Postgres",
+          "Python",
+          "Bash",
+          "Git"
+        ]
+      },
+      {
+        "title": "Consultant",
+        "employer": "Source Allies",
+        "icon": "assets/images/open-license/pattern-key-svgrepo-com.svg",
+        "start": "October 2017",
+        "end": "December 2017",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "AWS API Gateway",
+          "AWS CloudFormation",
+          "AWS Cognito",
+          "AWS DynamoDB",
+          "AWS IAM",
+          "AWS IoT",
+          "AWS Lambda",
+          "AWS S3",
+          "AWS Route 53",
+          "Bamboo CI/CD",
+          "Vue",
+          "Git"
+        ]
+      },
+      {
+        "title": "Fullstack Software Developer",
+        "employer": "Morelity",
+        "icon": "assets/images/open-license/chart-line-svgrepo-com.svg",
+        "start": "October 2016",
+        "end": "October 2017",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "AWS CloudFormation",
+          "AWS CodeBuild",
+          "AWS CodePipeline",
+          "AWS ECS",
+          "AWS EC2",
+          "AWS ELB",
+          "AWS IAM",
+          "AWS S3",
+          "AWS Route 53",
+          "NGINX",
+          "MongoDB",
+          "MeteorJS",
+          "Bash",
+          "Git"
+        ]
+      },
+      {
+        "title": "Fullstack Web Developer (Contractor)",
+        "employer": "RocketLift",
+        "icon": "assets/images/open-license/rocket-svgrepo-com.svg",
+        "start": "June 2016",
+        "end": "September 2017",
+        "present": false,
+        "tags": [
+          "DevOps",
+          "Linux",
+          "Apache",
+          "Postgres",
+          "JavasScript",
+          "HTML",
+          "CSS",
+          "PHP",
+          "Bash",
+          "Vagrant",
+          "Git"
+        ]
+      },
+      {
+        "title": "Fullstack Web Developer",
+        "employer": "Dice",
+        "icon": "assets/images/open-license/dice-svgrepo-com.svg",
+        "start": "December 2014",
+        "end": "June 2016",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "PHP",
+          "WordPress",
+          "Git"
+        ]
+      }
+    ],
+    "outreach": [
+      {
+        "title": "School Volunteer",
+        "employer": "Zachary Lane Elementary",
+        "icon": "assets/images/open-license/pencil-and-ruler-cross-of-school-materials-svgrepo-com.svg",
+        "start": "March 2025",
+        "showTimelineYear": true,
+        "end": null,
+        "present": true,
+        "tags": [
+          "Community"
+        ]
+      },
+      {
+        "title": "Giving Team Chair",
+        "employer": "Dice",
+        "icon": "assets/images/open-license/dice-svgrepo-com.svg",
+        "start": "December 2014",
+        "end": "June 2016",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "Fundraising"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor of Arts",
+        "employer": "Grinnell College",
+        "icon": "assets/images/open-license/college-svgrepo-com.svg",
+        "start": "May 2014",
+        "end": null,
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "Philosophy",
+          "Computer Science"
+        ]
+      },
+      {
+        "title": "Research Assistant",
+        "employer": "Carnegie Mellon University",
+        "icon": "assets/images/open-license/language-svgrepo-com.svg",
+        "start": "June 2013",
+        "end": "August 2013",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "Computational Linguistics"
+        ]
+      }
+    ]
+  },
+  "posts": [
+    {
+      "title": "Example Post",
+      "slug": "example-post",
+      "summary": "<p>A short summary shown on the posts list.</p>",
+      "content": "<p>The full post content, rendered on its own page.</p>"
+    }
+  ],
+  "pages": [
+    {
+      "title": "About",
+      "slug": "about",
+      "content": "<p>Replace with real page content.</p>"
+    }
+  ]
+}

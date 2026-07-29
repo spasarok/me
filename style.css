@@ -4,9 +4,21 @@ html{
     margin-top: 0 !important;
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+body{
+    font-size: 17px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 a:hover{
     text-decoration: none;
+}
+.page .container,
+.archive .container{
+    max-width: 700px;
 }
 h1{
     font-size: 48px;
@@ -21,10 +33,14 @@ h2{
 }
 main{
     padding: 20px 0;
+    flex: 1 0 auto;
 }
 article,
 section{
     padding: 5px 0 20px;
+}
+kbd{
+    white-space: nowrap;
 }
 
 
@@ -33,12 +49,23 @@ header{
     background-color: #000;
     padding: 50px 0;
     border-bottom: 15px solid #337ab7;
+    position: relative;
+}
+header .socials {
+    text-align: right;
+    position: absolute;
+    top: 25px;
+    right: 25px;
 }
 header h1{
     color: #fff;
     font-size: 60px;
     margin: 20px 0;
     border-bottom: 0;
+}
+header h1 a{
+    color: inherit;
+    text-decoration: none;
 }
 nav{
     position: relative;
@@ -58,6 +85,10 @@ nav ul > li > a{
     color: #fff;
     text-decoration: none;
 }
+.nav-toggle,
+.nav-toggle-label{
+    display: none;
+}
 nav ul > li a:hover,
 nav ul > li a:active,
 nav ul > li a:focus{
@@ -66,13 +97,37 @@ nav ul > li a:focus{
     background-color: #337ab7;
 }
 
+/* Socials header + footer */
+.social-link a{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.social-link .icon{
+    height: 1.5em;
+    width: auto;
+}
+
 /* Home page */
 .home main h1{
     display: none;
 }
+.home .avatar-wrapper{
+    text-align: center;
+}
 .home .avatar{
     border-radius: 50%;
     border: 5px solid #000;
+    max-width: 200px;
+}
+.home .link-item a{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.home .link-item .icon{
+    height: 1.5em;
+    width: auto;
 }
 
 /* Resume */
@@ -137,6 +192,109 @@ nav ul > li a:focus{
 footer{
     padding: 20px 0;
     width: 100%;
-    color: #fff;
+    text-align: center;
     background-color: #000;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 24px;
+    }
+
+    header{
+        padding: 25px 0;
+    }
+    header h1{
+        font-size: 36px;
+    }
+    nav{
+        top: 10px;
+        min-height: 24px;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: auto;
+        margin: 0;
+        padding: 10px 0;
+        background-color: #000;
+        z-index: 10;
+    }
+    nav ul > li{
+        display: block;
+    }
+    nav ul > li > a{
+        display: block;
+        padding: 10px 0;
+        left: 0;
+        font-size: 14px;
+    }
+    .nav-toggle-label{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 3px;
+        right: 15px;
+        width: 26px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .nav-toggle-label span{
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 2px;
+    }
+    .nav-toggle:checked ~ ul{
+        display: flex;
+    }
+
+    .resume .timeline{
+        margin-left: 0;
+        border-left: none;
+    }
+    .resume-item{
+        position: static;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: flex-start;
+    }
+    .resume-item:last-child{
+        border-bottom: none;
+    }
+    .resume-item .icon{
+        position: static;
+        display: block;
+        width: 40px;
+        flex-shrink: 0;
+    }
+    .resume-item .year{
+        display: none;
+        vertical-align: middle;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    .resume-item .bullet{
+        display: none;
+    }
+    .resume-item .details{
+        margin-left: 15px;
+        margin-top: 0;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+    .resume-item .position{
+        padding-top: 0;
+    }
 }
