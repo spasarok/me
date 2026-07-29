@@ -10,9 +10,8 @@ function renderPosts({ site, nav, data }) {
   const root = '../';
   const items = (data.posts || []).map((post) => `<article>
                 <h2>
-                    ${escapeHtml(post.title)}
                     <a href="${escapeHtml(postLink(post, root))}">
-                        <button type="button" class="btn btn-primary btn-xs">Here!</button>
+                        ${escapeHtml(post.title)}
                     </a>
                 </h2>
                 ${post.summary || ''}
@@ -29,6 +28,7 @@ function renderPosts({ site, nav, data }) {
     site,
     nav,
     title: `Posts | ${site.title}`,
+    socials: data.socials,
     bodyClass: 'archive',
     root,
     content,

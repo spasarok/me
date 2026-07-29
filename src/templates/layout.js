@@ -8,15 +8,32 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function kbd(tags) {
+  return (tags || []).map((tag) => `<kbd>${escapeHtml(tag)}</kbd>`).join(' ');
+}
+
+function socialLink(item, root) {
+  return `<a href="${item.url}" class="social-link">
+        <img class="icon" src="${escapeHtml(root + item.iconLight)}" alt="${escapeHtml(item.label)}">
+      </a>
+    </article>`;
+}
+
 function renderNav(nav, root) {
   const items = nav.map((item) => {
     const href = (root + item.url) || './';
     return `<li><a href="${escapeHtml(href)}">${escapeHtml(item.label)}</a></li>`;
   }).join('\n            ');
-  return `<ul>\n            ${items}\n        </ul>`;
+  return `<input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>\n            ${items}\n        </ul>`;
 }
 
-function layout({ site, nav, title, bodyClass, root, content }) {
+function layout({ site, nav, title, socials, bodyClass, root, content }) {
   const cssPath = (p) => `${root}${p}`;
   return `<!DOCTYPE html>
 <html>
@@ -30,8 +47,12 @@ function layout({ site, nav, title, bodyClass, root, content }) {
 <body${bodyClass ? ` class="${escapeHtml(bodyClass)}"` : ''}>
 
 <header>
+    
     <div class="container">
-        <h1>${escapeHtml(site.title)}</h1>
+    <div class="socials">
+        ${socials.map((social) => socialLink(social, root))}
+    </div>
+        <h1><a href="${escapeHtml(root)}">${escapeHtml(site.title)}</a></h1>
     </div>
     <nav class="container">
         ${renderNav(nav, root)}
@@ -42,7 +63,9 @@ ${content}
 
 <footer>
     <div class="container">
-<!--        <p>This site and its intellectual contents copyright ${escapeHtml(site.copyrightName)} ${new Date().getFullYear()}</p>-->
+                <div class="socials">
+                    ${socials.map((social) => socialLink(social, root))}
+                </div>
     </div>
 </footer>
 
@@ -51,4 +74,4 @@ ${content}
 `;
 }
 
-module.exports = { layout, escapeHtml };
+module.exports = { layout, escapeHtml, kbd };

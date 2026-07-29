@@ -1,8 +1,4 @@
-const { layout, escapeHtml } = require('./layout');
-
-function kbd(tags) {
-  return (tags || []).map((tag) => `<kbd>${escapeHtml(tag)}</kbd>`).join(' ');
-}
+const { layout, escapeHtml, kbd } = require('./layout');
 
 function yearOf(dateStr) {
   const match = /\b(\d{4})\b/.exec(dateStr || '');
@@ -31,7 +27,7 @@ function timeline(items, root) {
 
 function renderResume({ site, nav, data }) {
   const root = '../';
-  const { skills, languages, technologies, experience, outreach } = data.resume;
+  const { skills, languages, technologies, experience, outreach, education } = data.resume;
 
   const content = `<main class="resume">
     <div class="container">
@@ -65,6 +61,13 @@ function renderResume({ site, nav, data }) {
                 ${timeline(outreach, root)}
             </div>
         </section>
+        
+        <section class="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                ${timeline(education, root)}
+            </div>
+        </section>
     </div>
 </main>`;
 
@@ -72,6 +75,7 @@ function renderResume({ site, nav, data }) {
     site,
     nav,
     title: `Resume | ${site.title}`,
+    socials: data.socials,
     bodyClass: 'resume',
     root,
     content,
