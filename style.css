@@ -224,7 +224,7 @@ footer{
         right: 0;
         width: auto;
         margin: 0;
-        padding: 10px 0;
+        padding-top: 10px;
         background-color: #000;
         z-index: 10;
     }
@@ -233,9 +233,9 @@ footer{
     }
     nav ul > li > a{
         display: block;
-        padding: 10px 0;
+        padding: 20px;
         left: 0;
-        font-size: 14px;
+        border-top: 1px #333 solid;
     }
     .nav-toggle-label{
         display: flex;
