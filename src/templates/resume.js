@@ -9,10 +9,10 @@ function yearOf(dateStr) {
   return match ? match[1] : '';
 }
 
-function resumeItem(item, isFirst, root) {
+function resumeItem(item, root) {
   return `<article class="resume-item">
                     <img class="icon" src="${escapeHtml(root + item.icon)}" alt="${escapeHtml(item.title)}">
-                    ${isFirst ? `<time class="year">${escapeHtml(yearOf(item.start))}</time>` : ''}
+                    ${item.showTimelineYear ? `<time class="year">${escapeHtml(yearOf(item.start))}</time>` : ''}
                     <div class="bullet"><div class="bullet-inner"></div></div>
                     <div class="details">
                         <div class="position">${escapeHtml(item.title)}</div>
@@ -26,7 +26,7 @@ function resumeItem(item, isFirst, root) {
 }
 
 function timeline(items, root) {
-  return items.map((item, i) => resumeItem(item, i === 0, root)).join('\n                ');
+  return items.map((item) => resumeItem(item, root)).join('\n                ');
 }
 
 function renderResume({ site, nav, data }) {

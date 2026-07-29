@@ -41,7 +41,7 @@ ${content}
 
 <footer>
     <div class="container">
-        <p>This site and its intellectual contents copyright ${escapeHtml(site.copyrightName)} ${new Date().getFullYear()}</p>
+<!--        <p>This site and its intellectual contents copyright ${escapeHtml(site.copyrightName)} ${new Date().getFullYear()}</p>-->
     </div>
 </footer>
 

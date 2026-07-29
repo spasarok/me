@@ -1,27 +1,26 @@
 const { layout, escapeHtml } = require('./layout');
 
-function lessonLink(lesson, root) {
-  if (lesson.content) return `${root}lessons/${lesson.slug}/`;
-  if (lesson.url) return lesson.url;
+function postLink(post, root) {
+  if (post.content) return `${root}posts/${post.slug}/`;
+  if (post.url) return post.url;
   return '#';
 }
 
-function renderLessons({ site, nav, data }) {
+function renderPosts({ site, nav, data }) {
   const root = '../';
-  const items = (data.lessons || []).map((lesson) => `<article>
+  const items = (data.posts || []).map((post) => `<article>
                 <h2>
-                    ${escapeHtml(lesson.title)}
-                    <a href="${escapeHtml(lessonLink(lesson, root))}">
+                    ${escapeHtml(post.title)}
+                    <a href="${escapeHtml(postLink(post, root))}">
                         <button type="button" class="btn btn-primary btn-xs">Here!</button>
                     </a>
                 </h2>
-                ${lesson.summary || ''}
+                ${post.summary || ''}
             </article>`).join('\n            ');
 
   const content = `<main class="archive">
     <div class="container">
-        <h1>Lessons</h1>
-
+        <h1>Posts</h1>
         ${items}
     </div>
 </main>`;
@@ -29,11 +28,11 @@ function renderLessons({ site, nav, data }) {
   return layout({
     site,
     nav,
-    title: `Lessons | ${site.title}`,
+    title: `Posts | ${site.title}`,
     bodyClass: 'archive',
     root,
     content,
   });
 }
 
-module.exports = { renderLessons };
+module.exports = { renderPosts };

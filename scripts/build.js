@@ -3,7 +3,7 @@ const path = require('path');
 
 const { renderHome } = require('../src/templates/home');
 const { renderResume } = require('../src/templates/resume');
-const { renderLessons } = require('../src/templates/lessons');
+const { renderPosts } = require('../src/templates/posts');
 const { renderPage } = require('../src/templates/page');
 
 const ROOT = path.join(__dirname, '..');
@@ -42,17 +42,17 @@ function build() {
 
   writeFile('index.html', renderHome({ site, nav, data }));
   writeFile('resume/index.html', renderResume({ site, nav, data }));
-  writeFile('lessons/index.html', renderLessons({ site, nav, data }));
+  writeFile('posts/index.html', renderPosts({ site, nav, data }));
 
-  for (const lesson of data.lessons || []) {
-    if (!lesson.content) continue;
+  for (const post of data.posts || []) {
+    if (!post.content) continue;
     writeFile(
-      `lessons/${lesson.slug}/index.html`,
+      `posts/${post.slug}/index.html`,
       renderPage({
         site,
         nav,
-        title: lesson.title,
-        contentHtml: lesson.content,
+        title: post.title,
+        contentHtml: post.content,
         root: '../../',
       })
     );

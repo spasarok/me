@@ -13,8 +13,8 @@
       "url": "resume/"
     },
     {
-      "label": "Lessons",
-      "url": "lessons/"
+      "label": "Posts",
+      "url": "posts/"
     }
   ],
   "home": {
@@ -60,7 +60,8 @@
         "title": "Senior Software Engineer",
         "employer": "Wizards of the Coast",
         "icon": "assets/images/open-license/card-random-svgrepo-com.svg",
-        "start": "October 2024",
+        "start": "October 2023",
+        "showTimelineYear": true,
         "end": null,
         "present": true,
         "tags": [
@@ -73,12 +74,81 @@
         ]
       },
       {
-        "title": "Previous Position",
-        "employer": "Previous Employer",
-        "icon": "assets/images/research.png",
+        "title": "Senior Software Engineer",
+        "employer": "Target Corporation",
+        "icon": "assets/images/open-license/target-svgrepo-com.svg",
+        "start": "Jun 2019",
+        "end": "September 2023",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "Go",
+          "Docker",
+          "Postgres",
+          "Workflows",
+          "Infrastructure",
+          "Grafana",
+          "Git"
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "Target Corporation",
+        "icon": "assets/images/open-license/target-svgrepo-com.svg",
         "start": "August 2018",
-        "end": "May 2020",
-        "present": false
+        "end": "June 2019",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "Python",
+          "Bash",
+          "Ansible",
+          "AWX",
+          "Git"
+        ]
+      },
+      {
+        "title": "Software Engineer, Contractor",
+        "employer": "Granular Insights",
+        "icon": "assets/images/open-license/farm-mill-wind-svgrepo-com.svg",
+        "start": "January 2018",
+        "end": "August 2018",
+        "present": false,
+        "tags": [
+          "AWS CloudFormation",
+          "AWS SQS",
+          "AWS RDS",
+          "AWS S3",
+          "Terraform",
+          "Docker",
+          "Postgres",
+          "Python",
+          "Bash",
+          "Git"
+        ]
+      },
+      {
+        "title": "Consultant",
+        "employer": "Source Allies",
+        "icon": "assets/images/open-license/connection-pattern-1105-svgrepo-com.svg",
+        "start": "October 2017",
+        "end": "December 2017",
+        "showTimelineYear": true,
+        "present": false,
+        "tags": [
+          "AWS API Gateway",
+          "AWS CloudFormation",
+          "AWS Cognito",
+          "AWS DynamoDB",
+          "AWS IAM",
+          "AWS IoT",
+          "AWS Lambda",
+          "AWS Route 53",
+          "AWS S3",
+          "Bamboo CI/CD",
+          "Vue",
+          "Git"
+        ]
       }
     ],
     "outreach": [
@@ -87,17 +157,18 @@
         "employer": "Zachary Lane Elementary",
         "icon": "assets/images/teaching.png",
         "start": "March 2025",
+        "showTimelineYear": true,
         "end": null,
         "present": true
       }
     ]
   },
-  "lessons": [
+  "posts": [
     {
-      "title": "Example Lesson",
-      "slug": "example-lesson",
-      "summary": "<p>A short summary shown on the lessons list.</p>",
-      "content": "<p>The full lesson content, rendered on the lesson's own page.</p>"
+      "title": "Example Post",
+      "slug": "example-post",
+      "summary": "<p>A short summary shown on the posts list.</p>",
+      "content": "<p>The full post content, rendered on its own page.</p>"
     }
   ],
   "pages": [
