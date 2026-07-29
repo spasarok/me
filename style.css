@@ -88,15 +88,11 @@ nav ul > li a:focus{
     padding: 30px;
     position: relative;
 }
-.resume-item .icon-frame {
+.resume-item .icon {
     position: absolute;
     top: 50px;
     left: 30px;
     width: 80px;
-}
-.resume-item .icon-frame .icon {
-    display: block;
-    width: 100%;
 }
 .resume-item .year{
     position: absolute;
@@ -185,34 +181,11 @@ footer{
     .resume-item:last-child{
         border-bottom: none;
     }
-    .resume-item .icon-frame{
-        position: relative;
-        top: 0;
-        left: 0;
-        display: inline-block;
+    .resume-item .icon{
+        position: static;
+        display: block;
         width: 40px;
-        height: 40px;
         flex-shrink: 0;
-    }
-    .resume-item .icon-frame .icon{
-        visibility: hidden;
-    }
-    .resume-item .icon-frame::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #000;
-        -webkit-mask-image: var(--icon-url);
-        mask-image: var(--icon-url);
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center;
-        mask-position: center;
     }
     .resume-item .year{
         display: none;
