@@ -76,6 +76,9 @@ nav ul > li a:focus{
 }
 
 /* Resume */
+.resume kbd{
+    white-space: nowrap;
+}
 .resume .timeline{
     margin-left: 100px;
     margin-top: 20px;
@@ -85,11 +88,15 @@ nav ul > li a:focus{
     padding: 30px;
     position: relative;
 }
-.resume-item .icon {
+.resume-item .icon-frame {
     position: absolute;
     top: 50px;
     left: 30px;
     width: 80px;
+}
+.resume-item .icon-frame .icon {
+    display: block;
+    width: 100%;
 }
 .resume-item .year{
     position: absolute;
@@ -138,4 +145,89 @@ footer{
     padding: 20px 0;
     width: 100%;
     text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 24px;
+    }
+
+    header{
+        padding: 25px 0;
+    }
+    header h1{
+        font-size: 36px;
+    }
+    nav{
+        top: 10px;
+    }
+    nav ul > li > a{
+        padding: 8px;
+        left: 0;
+        font-size: 14px;
+    }
+
+    .resume .timeline{
+        margin-left: 0;
+        border-left: none;
+    }
+    .resume-item{
+        position: static;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: flex-start;
+    }
+    .resume-item:last-child{
+        border-bottom: none;
+    }
+    .resume-item .icon-frame{
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+    .resume-item .icon-frame .icon{
+        visibility: hidden;
+    }
+    .resume-item .icon-frame::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        -webkit-mask-image: var(--icon-url);
+        mask-image: var(--icon-url);
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+    }
+    .resume-item .year{
+        display: none;
+        vertical-align: middle;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    .resume-item .bullet{
+        display: none;
+    }
+    .resume-item .details{
+        margin-left: 15px;
+        margin-top: 0;
+    }
+    .resume-item .position{
+        padding-top: 0;
+    }
 }

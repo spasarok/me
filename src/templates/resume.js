@@ -11,7 +11,9 @@ function yearOf(dateStr) {
 
 function resumeItem(item, root) {
   return `<article class="resume-item">
-                    <img class="icon" src="${escapeHtml(root + item.icon)}" alt="${escapeHtml(item.title)}">
+                    <span class="icon-frame" style="--icon-url: url('${escapeHtml(root + item.icon)}')">
+                        <img class="icon" src="${escapeHtml(root + item.icon)}" alt="${escapeHtml(item.title)}">
+                    </span>
                     ${item.showTimelineYear ? `<time class="year">${escapeHtml(yearOf(item.start))}</time>` : ''}
                     <div class="bullet"><div class="bullet-inner"></div></div>
                     <div class="details">

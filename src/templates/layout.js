@@ -21,6 +21,7 @@ function layout({ site, nav, title, bodyClass, root, content }) {
   return `<!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(title)}</title>
     <link rel="stylesheet" href="${cssPath('lib/bootstrap-3.3.6/css/bootstrap.min.css')}">
     <link rel="stylesheet" href="${cssPath('style.css')}">
