@@ -2,7 +2,7 @@
   "name": "personal-website",
   "private": true,
   "version": "1.0.0",
-  "description": "Static site build for kimspasaro.com, data-driven from data/site.json",
+  "description": "Static site build, data-driven from data/site.json",
   "scripts": {
     "build": "node scripts/build.js",
     "serve": "node scripts/serve.js",
