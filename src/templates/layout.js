@@ -35,7 +35,7 @@ function renderNav(nav, root) {
 function layout({ site, nav, title, socials, bodyClass, root, content }) {
   const cssPath = (p) => `${root}${p}`;
   return `<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(title)}</title>
