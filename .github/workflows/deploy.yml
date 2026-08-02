@@ -1,8 +1,8 @@
-name: Deploy static site
+name: Deploy
 
 on:
   push:
-    branches: [static]
+    branches: [web]
   workflow_dispatch:
 
 permissions:
