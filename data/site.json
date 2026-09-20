@@ -25,6 +25,10 @@
     {
       "label": "Resume",
       "url": "resume/"
+    },
+    {
+      "label": "Posts",
+      "url": "posts/"
     }
   ],
   "home": {
@@ -296,12 +300,7 @@
     ]
   },
   "posts": [
-    {
-      "title": "Example Post",
-      "slug": "example-post",
-      "summary": "<p>A short summary shown on the posts list.</p>",
-      "content": "<p>The full post content, rendered on its own page.</p>"
-    }
+    "retroid-pocket-nova-setup"
   ],
   "pages": [
     {

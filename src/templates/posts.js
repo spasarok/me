@@ -1,20 +1,14 @@
 const { layout, escapeHtml } = require('./layout');
 
-function postLink(post, root) {
-  if (post.content) return `${root}posts/${post.slug}/`;
-  if (post.url) return post.url;
-  return '#';
-}
-
-function renderPosts({ site, nav, data }) {
+function renderPosts({ site, nav, data, posts }) {
   const root = '../';
-  const items = (data.posts || []).map((post) => `<article>
+  const items = posts.map((post) => `<article>
                 <h2>
-                    <a href="${escapeHtml(postLink(post, root))}">
+                    <a href="${root}posts/${escapeHtml(post.slug)}/">
                         ${escapeHtml(post.title)}
                     </a>
                 </h2>
-                ${post.summary || ''}
+                ${post.summaryHtml || ''}
             </article>`).join('\n            ');
 
   const content = `<main class="archive">

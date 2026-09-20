@@ -7,7 +7,7 @@ const MIME = require('./mime');
 const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const PORT = process.env.PORT || 8080;
-const WATCH_TARGETS = ['data', 'src', 'style.css'];
+const WATCH_TARGETS = ['data', 'src', 'posts', 'style.css'];
 
 const RELOAD_SNIPPET = `
 <script>
