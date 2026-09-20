@@ -3,7 +3,7 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
-const WATCH_TARGETS = ['data', 'src', 'style.css'];
+const WATCH_TARGETS = ['data', 'src', 'posts', 'style.css'];
 
 let pending = false;
 

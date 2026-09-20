@@ -5,9 +5,11 @@ const { renderHome } = require('../src/templates/home');
 const { renderResume } = require('../src/templates/resume');
 const { renderPosts } = require('../src/templates/posts');
 const { renderPage } = require('../src/templates/page');
+const { loadPosts } = require('./posts');
 
 const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
+const POSTS_DIR = path.join(ROOT, 'posts');
 
 function loadData() {
   const raw = fs.readFileSync(path.join(ROOT, 'data', 'site.json'), 'utf8');
@@ -20,10 +22,11 @@ function writeFile(relPath, contents) {
   fs.writeFileSync(fullPath, contents);
 }
 
-function copyDir(src, dest) {
+function copyDir(src, dest, { exclude } = {}) {
   if (!fs.existsSync(src)) return;
   fs.mkdirSync(dest, { recursive: true });
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    if (exclude && exclude.includes(entry.name)) continue;
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
     if (entry.isDirectory()) {
@@ -39,13 +42,17 @@ function build() {
 
   const data = loadData();
   const { site, nav, socials } = data;
+  const posts = loadPosts(POSTS_DIR);
+
+  const postList = (data.posts || [])
+    .map((slug) => posts.get(slug))
+    .filter(Boolean);
 
   writeFile('index.html', renderHome({ site, nav, data }));
   writeFile('resume/index.html', renderResume({ site, nav, data }));
-  writeFile('posts/index.html', renderPosts({ site, nav, data }));
+  writeFile('posts/index.html', renderPosts({ site, nav, data, posts: postList }));
 
-  for (const post of data.posts || []) {
-    if (!post.content) continue;
+  for (const post of posts.values()) {
     writeFile(
       `posts/${post.slug}/index.html`,
       renderPage({
@@ -53,10 +60,13 @@ function build() {
         nav,
         title: post.title,
         socials,
-        contentHtml: post.content,
+        contentHtml: post.contentHtml,
         root: '../../',
       })
     );
+    copyDir(path.join(POSTS_DIR, post.slug), path.join(DIST, 'posts', post.slug), {
+      exclude: ['index.md'],
+    });
   }
 
   for (const page of data.pages || []) {
