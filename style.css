@@ -43,8 +43,8 @@ img{
     max-width: 100%;
     height: auto;
 }
-.page .container,
-.archive .container{
+main.page .container,
+main.archive .container{
     max-width: 700px;
 }
 h1,

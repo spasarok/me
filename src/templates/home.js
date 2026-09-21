@@ -10,7 +10,6 @@ function renderHome({ site, nav, data }) {
             <div class="row">
                 <div class="col-sm-6">
                     <section>
-                        <h2>About</h2>
                         <p>
                             ${kbd(tags)}
                         </p>
